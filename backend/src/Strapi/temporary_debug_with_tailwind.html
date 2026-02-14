@@ -1,0 +1,270 @@
+
+<style>
+    * {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+    }
+    td, th, div, p, span {
+        max-width: 100%; 
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta content=" initial-scale=1.0" name="viewport">
+    <meta content="Regrapes" name="author">
+    <meta content="Testbeschreibung" name="description">
+    <meta content="2024-08-01T08:27:37.296907" name="date">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <title>
+        Rechnung 1
+    </title>
+    <style>
+        @page {                
+                     size: 6.2in 8.77in ;
+                     margin: 0;
+                     padding: 0;
+               }
+           body {                
+                     height: 842px;
+                     width: 595px;
+                     margin-left: 0;
+                     margin-right: 0;
+                     background: white;
+                     font-family:Arial, sans-serif;
+                     overflow: hidden;
+                     padding: 0px;
+              }
+           pre { 
+                        font-family: inherit !important;
+                        white-space:pre-line;     
+              }
+           .textbox {                
+                 position: absolute;
+                 background-color: transparent;
+                 z-index: 49; 
+                 padding: 0px;
+                 margin: 0px;
+              }
+           .rectangle {                
+                    position: absolute;
+                 }
+           .line {                
+                    position: absolute;
+                 }
+           mark {                
+                 background-color: #00ff00;
+                 color: black;
+                 }
+           
+                 @tailwind base;
+                 @tailwind components;
+                 @tailwind utilities;
+             
+       }
+    </style>
+<script src="https://cdn.tailwindcss.com"></script></head>
+<body><img src="data:image/png;base64,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" alt="Company Logo" class="invoice-logo" style="position: absolute; right: 40px; top: 30px; width: 70px; height: auto; z-index: 10; opacity: 0.85;" data-logo-element="true" />
+
+<div class="textbox bottom-[709px] left-[62px] w-auto h-auto">
+    <pre class="text-[7px] text-decoration-line: underline">BurgerWelt GmbH Charles-Darwin-Ring 99 - 66399 Mandelbachtal DEUTSCHLAND</pre>
+</div>
+<div class="textbox bottom-[706px] left-[320px] w-auto h-auto">
+    <pre class="text-[13px] font-bold">Rechnung</pre>
+</div>
+<div class="textbox bottom-[688px] left-[320px] w-auto h-auto">
+    <pre class="text-[8px]">Rechnungs-Nr.</pre>
+</div>
+<div class="textbox bottom-[676px] left-[395px] w-auto h-auto">
+   <pre class="text-[8px] text-left">23-05933 / 
+   26.08.2022</pre>
+</div>
+<div class="textbox bottom-[620px] left-[62px] w-auto h-auto">
+   <pre class="text-[11px]">Kai Jakobi
+    
+   Amselweg 5 b
+   24326 Kalübbe
+DEUTSCHLAND</pre>
+</div>
+<div class="textbox bottom-[600px] left-[320px] w-auto h-auto">
+   <pre class="text-[8px]">Auftrags-Nr.
+   Lieferschein-Nr.
+Kunden-Nr.</pre>
+    <pre class="text-[8px] font-bold">Zahlungsmethode</pre>
+    <pre class="text-[8px]">Seite
+   Versanddatum</pre>
+</div>
+<div class="textbox bottom-[600px] left-[395px] w-auto h-auto">
+   <pre class="text-[8px]">2175 / 06.09.2023
+   498011556769 / 26.08.2022
+   P5120474</pre>
+    <pre class="text-[8px] text-left font-bold">PayPal</pre>
+    <pre class="text-[8px] text-left">1 von 1 
+      26.08.2022</pre>
+</div>
+<div class="rectangle bottom-[706px] left-[312px] border z-10" style="width: 222px; height: 23px; border-color: rgb(210, 210, 210); background-color: rgb(210,210,210); ">
+</div>
+<div class="rectangle bottom-[581px] left-[312px] border z-20" style="width: 222px; height: 148px; border-color: rgb(0, 0, 0); ">
+</div>
+<div class="line bottom-[546px] left-[58px] z-10" style="width: 476px; height: 1px; background-color: rgb(0,0,0); ">
+</div>
+<div class="textbox bottom-[531px] left-[60px] w-auto h-auto">
+    <pre class="text-[9px] font-bold">Artikel-Nr.</pre>
+</div>
+<div class="textbox bottom-[531px] left-[130px] w-auto h-auto">
+    <pre class="text-[9px] font-bold">Bezeichnung</pre>
+</div>
+<div class="textbox bottom-[531px] left-[270px] w-auto h-auto">
+    <pre class="text-[9px] font-bold">Menge</pre>
+</div>
+<div class="textbox bottom-[531px] right-[180px] w-auto h-auto">
+    <pre class="text-[9px] font-bold">Preis in EUR</pre>
+</div>
+<div class="textbox bottom-[531px] right-[100px] w-auto h-auto">
+    <pre class="text-[9px] font-bold">Gesamtpreis</pre>
+</div>
+<div class="textbox bottom-[531px] right-[65px] w-auto h-auto">
+    <pre class="text-[9px] font-bold">MwSt</pre>
+</div>
+<div class="line bottom-[527px] left-[58px] z-10" style="width: 476px; height: 1px; background-color: rgb(0,0,0); ">
+</div>
+<div class="textbox bottom-[205px] left-[60px] w-auto h-auto">
+    <pre class="text-[9px] mb-4">1</pre>
+    <pre class="text-[9px] mb-5">2</pre>
+    <pre class="text-[9px] mb-4">3</pre>
+    <pre class="text-[9px] mb-5">4</pre>
+    <pre class="text-[9px] mb-4">5</pre>
+    <pre class="text-[9px] mb-5">6</pre>
+    <pre class="text-[9px] mb-4">7</pre>
+    <pre class="text-[9px] mb-5">8</pre>
+    <pre class="text-[9px] mb-4"></pre>
+    <pre class="text-[9px] mb-5"></pre>
+</div>
+<div class="textbox bottom-[205px] left-[130px] w-auto h-auto">
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  2022314-28725</pre>
+    <pre class="text-[7px]">Seriennummer : </pre>
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  2022415-73136</pre>
+    <pre class="text-[7px]">Seriennummer : </pre>
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  2023831-8083</pre>
+    <pre class="text-[7px]">Seriennummer :   </pre>
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  202222-99395</pre>
+    <pre class="text-[7px]">Seriennummer :   </pre>
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  2022414-50769</pre>
+    <pre class="text-[7px]">Seriennummer :   </pre>
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  20231027-819</pre>
+    <pre class="text-[7px]">Seriennummer :   </pre>
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  202229-2596</pre>
+    <pre class="text-[7px]">Seriennummer :   </pre>
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  20221030-66929</pre>
+    <pre class="text-[7px]">Seriennummer :   </pre>
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  </pre>
+    <pre class="text-[7px]">Seriennummer :   </pre>
+    <pre class="text-[7px]">Veggie-Burger-Combo</pre>
+    <pre class="text-[7px]">Hersteller-Artikel-Nr. :  </pre>
+    <pre class="text-[7px]">Seriennummer :   </pre>
+</div>
+<div class="textbox bottom-[205px] right-[270px] w-auto h-auto text-right">
+    <pre class="text-[9px] mb-4">5,00</pre>
+    <pre class="text-[9px] mb-5">10,00</pre>
+    <pre class="text-[9px] mb-4">10,00</pre>
+    <pre class="text-[9px] mb-5">10,00</pre>
+    <pre class="text-[9px] mb-4">10,00</pre>
+    <pre class="text-[9px] mb-5">10,00</pre>
+    <pre class="text-[9px] mb-4">10,00</pre>
+    <pre class="text-[9px] mb-5">10,00</pre>
+    <pre class="text-[9px] mb-4"></pre>
+    <pre class="text-[9px] mb-5"></pre>
+</div>
+<div class="textbox bottom-[205px] right-[180px] w-auto h-auto text-right">
+    <pre class="text-[9px] mb-4">12,00</pre>
+    <pre class="text-[9px] mb-5">12,00</pre>
+    <pre class="text-[9px] mb-4">14,00</pre>
+    <pre class="text-[9px] mb-5">12,00</pre>
+    <pre class="text-[9px] mb-4">12,00</pre>
+    <pre class="text-[9px] mb-5">7,00</pre>
+    <pre class="text-[9px] mb-4">9,99</pre>
+    <pre class="text-[9px] mb-5">12,00</pre>
+    <pre class="text-[9px] mb-4"></pre>
+    <pre class="text-[9px] mb-5"></pre>
+</div>
+<div class="textbox bottom-[205px] right-[100px] w-auto h-auto text-right">
+    <pre class="text-[9px] mb-4">71,40</pre>
+    <pre class="text-[9px] mb-5">142,80</pre>
+    <pre class="text-[9px] mb-4">166,60</pre>
+    <pre class="text-[9px] mb-5">142,80</pre>
+    <pre class="text-[9px] mb-4">142,80</pre>
+    <pre class="text-[9px] mb-5">83,30</pre>
+    <pre class="text-[9px] mb-4">118,88</pre>
+    <pre class="text-[9px] mb-5">128,40</pre>
+    <pre class="text-[9px] mb-4"></pre>
+    <pre class="text-[9px] mb-5"></pre>
+</div>
+<div class="textbox bottom-[205px] right-[65px] w-auto h-auto">
+    <pre class="text-[9px] mb-4">A</pre>
+    <pre class="text-[9px] mb-5">A</pre>
+    <pre class="text-[9px] mb-4">A</pre>
+    <pre class="text-[9px] mb-5">A</pre>
+    <pre class="text-[9px] mb-4">A</pre>
+    <pre class="text-[9px] mb-5">A</pre>
+    <pre class="text-[9px] mb-4">A</pre>
+    <pre class="text-[9px] mb-5">A</pre>
+    <pre class="text-[9px] mb-4">A</pre>
+    <pre class="text-[9px] mb-5">A</pre>
+    
+</div>
+
+<div class="textbox bottom-[180px] left-[148px] w-auto h-auto">
+    <pre class="text-[9px]">Netto-Summe: 849,90</pre>
+</div>
+<div class="textbox bottom-[165px] left-[148px] w-auto h-auto">
+    <pre class="text-[9px]">Mehrwertsteuer(A): 19% auf 849,90 = 147,08</pre>
+</div>
+<div class="line bottom-[152px] left-[417px] z-10" style="width: 67px; height: 1px; background-color: rgb(0,0,0); ">
+</div>
+<div class="textbox bottom-[140px] left-[148px] w-auto h-auto">
+    <pre class="text-[9px] font-bold">Rechnungsendbetrag in EUR</pre>
+</div>
+<div class="textbox bottom-[140px] right-[113px] w-auto h-auto">
+    <pre class="text-[9px] font-bold">996,98</pre>
+</div>
+<div class="textbox bottom-[120px] left-[130px] w-auto h-auto">
+    <pre class="text-[8px] font-bold">Ohne Abzug fällig am: 26.08.2022</pre>
+</div>
+<div class="textbox bottom-[110px] left-[130px] w-auto h-auto">
+    <pre class="text-[8px]">Es gelten unsere AGB</pre>
+</div>
+<div class="textbox bottom-[90px] left-[62px] w-auto h-auto">
+    <pre class="text-[7px]">BurgerWelt GmbH Charles-Darwin-Ring 99 - 66399 Mandelbachtal</pre>
+</div>
+<div class="textbox bottom-[65px] left-[62px] w-auto h-auto">
+    <pre class="text-[7px]">USt-IDNr.: DE4559330713 
+    info@burgerwelt-gmbh.de &nbsp www.burgerwelt-gmbh.de</pre>
+</div>
+<div class="textbox bottom-[50px] left-[62px] w-auto h-auto">
+    <pre class="text-[7px]">Telefon: 6804 8591 *   Telefax:  6804 28606 *</pre>
+</div>
+<div class="textbox bottom-[40px] left-[62px] w-auto h-auto">
+    <pre class="text-[7px]">* (Ortstarif)</pre>
+</div>
+<div class="textbox bottom-[90px] left-[325px] w-auto h-auto">
+    <pre class="text-[7px]">Sparkasse Mandelbachtal</pre>
+</div>
+<div class="textbox bottom-[65px] left-[325px] w-auto h-auto">
+    <pre class="text-[7px]">SWIFT-BIC LRRYDE6B69G 
+    IBAN DE92 1692 1753 3560 4209</pre>
+</div>
+</body>
+</html>

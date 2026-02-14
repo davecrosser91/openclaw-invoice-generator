@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Rechnung {invoice_number}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-white">
+    <div class="w-575px h-740px mx-auto overflow-hidden bg-white p-8">
+        <div class="flex justify-end items-center mb-4">
+            <img src="{Firmenlogo}" alt="Firmenlogo" class="w-16 h-16" />
+        </div>
+        <div class="flex justify-between items-center py-4">
+            <div>
+                <h1 class="text-lg font-bold">{seller_name}</h1>
+                <p class="text-xs">{seller_address}</p>
+            </div>
+            <div class="text-xs">
+                <p>Telefon: {seller_phone}</p>
+                <p>Fax: {seller_fax}</p>
+                <p>E-Mail: {seller_email}</p>
+            </div>
+        </div>
+        <div class="mb-4">
+            <p class="text-sm font-medium">{buyer_name}</p>
+            <p class="text-xs">{buyer_address}</p>
+            <p class="text-xs">Kunden-ID: {buyer_customerID}</p>
+            <p class="text-xs">Rechnungsnummer: {invoicenumber}</p>
+            <p class="text-xs">Rechnungsdatum: {dateofinvoice}</p>
+        </div>
+        <h2 class="text-center font-bold my-4 m-8">Rechnung {invoicenumber}</h2>
+        <table class="min-w-full mb-4 border border-gray-300">
+            <thead>
+                <tr>
+                    <th class="text-xs font-medium px-2 py-1 border-b border-gray-300">Pos</th>
+                    <th class="text-xs font-medium px-2 py-1 border-b border-gray-300">Produktbeschreibung</th>
+                    <th class="text-xs font-medium px-2 py-1 border-b border-gray-300">Menge</th>
+                    <th class="text-xs font-medium px-2 py-1 border-b border-gray-300">Einzelpreis</th>
+                    <th class="text-xs font-medium px-2 py-1 border-b border-gray-300">Preis (exkl. MwSt.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-50">
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">1</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_name_1}</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_quantity_1}</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_price_1} €</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_cost_wo_tax_1} €</td>
+                </tr>
+                <tr class="bg-gray-100">
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">2</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_name_2}</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_quantity_2}</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_price_2} €</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_cost_wo_tax_2} €</td>
+                </tr>
+                <tr class="bg-gray-50">
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">3</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_name_3}</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_quantity_3}</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_price_3} €</td>
+                    <td class="text-xs px-2 py-1 border-b border-gray-300">{product_cost_wo_tax_3} €</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="flex justify-between mb-2">
+            <p class="text-xs font-medium">Zwischensumme (exkl. MwSt.)</p>
+            <p class="text-xs">{subtotal} €</p>
+        </div>
+        <div class="flex justify-between mb-2">
+            <p class="text-xs font-medium">Steuersatz {product_sales_tax_percent_1}</p>
+            <p class="text-xs">{taxes} €</p>
+        </div>
+        <div class="flex justify-between mb-4">
+            <p class="text-sm font-bold">Gesamt</p>
+            <p class="text-sm">{total} €</p>
+        </div>
+        <div class="flex justify-between items-center border-t border-gray-200 pt-4 mb-4">
+            <p class="text-lg font-bold">Zahlungsbetrag: {total} €</p>
+            <p class="text-xs">Zahlungsmethode: PayPal</p>
+        </div>
+        <p class="text-xs my-2">Bitte zahlen Sie den fälligen Betrag jetzt per PayPal.</p>
+        <p class="text-xs my-2">Verwenden Sie den folgenden Link [PayPal Zahlungslink]</p>
+        <div class="mt-4">
+        </div>
+        <div class="flex justify-between items-center mt-4">
+            <div>
+                <!-- Firmenlogo -->
+            </div>
+            <div>
+                <!-- QR-Code -->
+            </div>
+        </div>
+        <div class="text-xs mt-8">
+            <p>{seller_name}</p>
+            <p>{seller_address}</p>
+            <p>Bankverbindung: {seller_bankdetails}</p>
+        </div>
+    </div>
+</body>
+
+</html>

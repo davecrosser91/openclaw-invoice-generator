@@ -1,0 +1,90 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Set version and build image
+run-name: Set version and build image from ${{ github.ref_name }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump: 
+        type: choice
+        default: patch
+        options:
+          - patch
+          - minor
+          - major
+        description: Wie soll die Version aktualisiert werden? (major.minor.patch)
+  
+
+env:
+  IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
+  REGISTRY_USER: ${{ github.actor }}
+  REGISTRY_PASSWORD: ${{ github.token }}
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v4
+
+    - name: Extract Scope and Version
+      id: extract
+      run: |
+        git config user.email "bot@regrapes.dev"
+        git config user.name "Regrapes Release Bot"
+
+        VERSION=$(grep -E '^version[[:space:]]*=' pyproject.toml | head -1 | sed -E 's/^version[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/')
+        IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+        if [[ "${{ inputs.bump }}" = 'major' ]]; then
+          MAJOR=$((MAJOR + 1))
+          MINOR=0
+          PATCH=0
+        elif [[ "${{ inputs.bump }}" = 'minor' ]]; then
+          MINOR=$((MINOR + 1))
+          PATCH=0
+        else
+          PATCH=$((PATCH + 1))
+        fi
+
+        NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+
+        sed -i -E "s/^version[[:space:]]*=[[:space:]]*\".*\"/version = \"$NEW_VERSION\"/" pyproject.toml
+        git add pyproject.toml
+        git commit -m "chore: bump version to v$NEW_VERSION"
+        git tag "@ascend/python-backend@$NEW_VERSION"
+        git push
+        git push --tags
+
+        echo "SCOPE=python-backend" >> $GITHUB_OUTPUT
+        echo "VERSION=$NEW_VERSION" >> $GITHUB_OUTPUT
+
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry:  ghcr.io
+        username:  ${{ env.REGISTRY_USER }}
+        password:  ${{ env.REGISTRY_PASSWORD }}
+
+    - name: Build and push
+      uses: docker/build-push-action@v6
+      with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGE_REGISTRY }}/ascend/${{ steps.extract.outputs.SCOPE }}:latest, ${{ env.IMAGE_REGISTRY }}/ascend/${{ steps.extract.outputs.SCOPE }}:${{ steps.extract.outputs.VERSION }}
+          build-args: |
+            scope=${{ steps.extract.outputs.SCOPE }} 
+            

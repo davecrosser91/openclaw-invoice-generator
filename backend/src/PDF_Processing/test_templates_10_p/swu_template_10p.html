@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content=" initial-scale=1.0" name="viewport"/>
+  <title>
+   {invoicenumber}
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+      <style>
+          @page {                
+                size: 6.2in 8.77in;
+                margin: 0;
+                padding: 0;
+         }
+    body {
+        height: 842px;
+        width: 595px;
+        margin-left: auto;
+        margin-right: auto;
+        background: white;
+        overflow: hidden;
+        font-family:Arial, sans-serif
+    }
+   .textbox {
+            position: absolute;
+            background-color: transparent;
+            z-index: 1;
+            padding: 0px;
+            margin: 0px;
+     }
+    </style>
+ </head>
+ <body>
+  <div class="textbox" style=" left: 63px; bottom: 754px; width: 200px; height: 6px;">
+   <div style="font-size: 5pt;">
+    {seller_name} - {seller_street} - {seller_citywplc}
+   </div>
+  </div>
+  <div class="textbox" style=" left: 63px; bottom: 609px; width: 180px; height: 47px;">
+   <div style="font-size: 8pt;">
+    <p>{buyer_employee}</p>
+    <p>{buyer_street}</p>
+     <p>{buyer_citywplc}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 63px; bottom: 532px; width: 84px; height: 11px;">
+   <div style="font-size: 8pt;">
+    R E C H N U N G
+   </div>
+  </div>
+  <div class="textbox" style=" left: 63px; bottom: 482px; width: 178px; height: 34px;">
+   <div style="font-size: 8pt;">
+    <p>Grundentgelte:</p>
+    <p>Vertragskontonr.:</p>
+   </div>
+   <div style="font-size: 6pt;">
+    (bitte bei Überweisungen immer angeben)
+   </div>
+  </div>
+  <div class="textbox" style=" left: 187px; bottom: 494px; width: 131px; height: 22px;">
+   <div style="font-size: 8pt;">
+    <p>01.02.2024 bis 29.02.2024</p>
+    <p>{buyer_account_number}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 413px; bottom: 661px; width: 180px; height: 27px;">
+   <div style="font-size: 6pt;">
+    <p>{seller_name}</p>
+    <p>{seller_street}</p>
+    <p>{seller_citywplc}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 413px; bottom: 633px; width: 110px; height: 19px;">
+   <div style="font-size: 6pt;">
+    <p>Email: {seller_email}</p>
+    <p>{seller_website}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 375px; bottom: 574px; width: 145px; height: 21px;">
+   <div style="font-size: 6pt;">
+    <p>Ihr Ansprechpartner: Kundenservice</p>
+    <p>Durchwahl:      {seller_phone}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 375px; bottom: 526px; width: 73px; height: 33px;">
+   <div style="font-size: 6pt;">
+    <p>Rechnungsdatum:</p>
+    <p>Kundennr.:</p>
+    <p>Rechnungsnr:</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 460px; bottom: 526px; width: 50px; height: 33px;">
+   <div style="font-size: 6pt;">
+    <p>{dateofinvoice}</p>
+    <p>{buyer_customerid}</p>
+    <p>{invoicenumber}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 63px; bottom: 448px; width: 113px; height: 18px;">
+   <div style="font-size: 6pt;">
+    Pos. Artikelbezeichnung
+   </div>
+  </div>
+  <div class="textbox" style=" left: 357px; bottom: 448px; width: 27px; height: 18px;">
+   <div style="font-size: 6pt;">
+    Stück
+   </div>
+  </div>
+  <div class="textbox" style=" left: 485px; bottom: 448px; width: 29px; height: 18px;">
+   <div style="font-size: 6pt;">
+    <p>Betrag</p>
+    <p>in €</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 448px; bottom: 448px; width: 73px; height: 18px;">
+   <div style="font-size: 6pt;">
+    <p>Stückpr.</p>
+    <p>in €</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 63px; bottom: 415px; width: 250px; height: 18px;">
+   <div style="font-size: 6pt;">
+    <p>Vertrag {contract_number}</p>
+    <p>Standort: {buyer_address}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 93px; bottom: 380px; width: 250px; height: 28px;">
+   <div style="font-size: 6pt;">
+    <p>{product_name_1}</p>
+    <p>{product_name_2}</p>
+    <p>{product_name_3}</p>
+    <p>{product_name_4}</p>
+    <p>{product_name_5}</p>
+    <p>{product_name_6}</p>
+    <p>{product_name_7}</p>
+    <p>{product_name_8}</p>
+    <p>{product_name_9}</p>
+    <p>{product_name_10}</p>
+   </div>
+  </div>
+   <div class="textbox" style=" left: 357px; bottom: 380px; width: 25px; height: 28px;">
+   <div style="font-size: 6pt;">
+    <p>{product_quantity_1}</p>
+    <p>{product_quantity_2}</p>
+    <p>{product_quantity_3}</p>
+    <p>{product_quantity_4}</p>
+    <p>{product_quantity_5}</p>
+    <p>{product_quantity_6}</p>
+    <p>{product_quantity_7}</p>
+    <p>{product_quantity_8}</p>
+    <p>{product_quantity_9}</p>
+    <p>{product_quantity_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 448px; bottom: 380px; width: 23px; height: 28px;">
+   <div style="font-size: 6pt;">
+    <p>{product_price_1}</p>
+    <p>{product_price_2}</p>
+    <p>{product_price_3}</p>
+    <p>{product_price_4}</p>
+    <p>{product_price_5}</p>
+    <p>{product_price_6}</p>
+    <p>{product_price_7}</p>
+    <p>{product_price_8}</p>
+    <p>{product_price_9}</p>
+    <p>{product_price_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 491px; bottom: 380px; width: 23px; height: 28px;">
+   <div style="font-size: 6pt;">
+    <p>{product_cost_wo_tax_1}</p>
+    <p>{product_cost_wo_tax_2}</p>
+    <p>{product_cost_wo_tax_3}</p>
+    <p>{product_cost_wo_tax_4}</p>
+    <p>{product_cost_wo_tax_5}</p>
+    <p>{product_cost_wo_tax_6}</p>
+    <p>{product_cost_wo_tax_7}</p>
+    <p>{product_cost_wo_tax_8}</p>
+    <p>{product_cost_wo_tax_9}</p>
+    <p>{product_cost_wo_tax_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 93px; bottom: 235px; width: 300px; height: 33px;">
+   <div style="font-size: 6pt;">
+    <p>Summe</p>
+    <p>Rechnungsbetrag (Netto) mit {product_sales_tax_percent_1} zu versteuern</p>
+    <p>zzgl. Mehrwertsteuer ({product_sales_tax_percent_1})</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 488px; bottom: 235px; width: 23px; height: 33px;">
+   <div style="font-size: 6pt;">
+    <p>{subtotal}</p>
+    <p>{subtotal}</p>
+    <p>{taxes}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 93px; bottom: 210px; width: 112px; height: 9px;">
+   <div style="font-size: 6pt;">
+    Rechnungsbetrag (Brutto)
+   </div>
+  </div>
+    <div class="textbox" style=" left: 482px; bottom: 210px; width: 80px; height: 10px;">
+   <div style="font-size: 6pt;">
+    € {total}
+   </div>
+  </div>
+
+  <div class="textbox" style=" left: 57px; bottom: 162px; width: 481px; height: 34px;">
+   <div style="font-size: 6pt;">
+    Der Euro-Rechnungsbetrag wird am {dateofdeliveryorservice} per SEPA-Lastschrift (Gläubiger-ID: {seller_iban})
+    von Konto IBAN: {buyer_iban}, BIC: {buyer_bic} (Mandatsreferenznummer: P0010205066097940123002 ) abgebucht.
+   </div>
+  </div>
+  <div class="textbox" style=" left: 57px; bottom: 85px; width: 473px; height: 70px;">
+   <div style="font-size: 7pt;">
+    Informationen nach TK-Transparenzverordnung §4:
+   </div>
+   <div style="font-size: 6pt;">
+    Der Vertrag {contract_number} beginnt mit der Inbetriebnahme Ihres Anschlusses am {dateofdeliveryorservice} mit einer Laufzeit von 24 Monaten.
+    Der aktuelle Zeitpunkt des Endes der Mindestvertragslaufzeit ist der {dateofcontract}. Ein Kündigungsschreiben muss bis
+    spätestens {dateoftermination} bei der {seller_name} eingehen, um eine Vertragsverlängerung auf unbestimmte Zeit zu verhindern (Kündigungsfrist 1 Monat).
+   </div>
+  </div>
+  <div class="textbox" style=" left: 275px; bottom: 166px; width: 8px; height: 10px;">
+  </div>
+  <div class="textbox" style=" left: 57px; bottom: 75px; width: 350px; height: 10px;">
+   <div style="font-size: 7pt;">
+    Informationen zum generellen Ablauf des Anbieterwechsels ﬁnden Sie unter
+   </div>
+  </div>
+  <div class="textbox" style=" left: 63px; bottom: 21px; width: 74px; height: 40px;">
+   <div style="font-size: 5pt;">
+    <p>Ein Unternehmen der</p>
+    <p>{seller_name}</p>
+    <p>Corporation</p>
+    <p>{seller_website}</p>
+    <p>{seller_email}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 157px; bottom: 46px; width: 67px; height: 15px;">
+   <div style="font-size: 5pt;">
+    <p>Geschäftsführer</p>
+    <p>{seller_employee}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 248px; bottom: 30px; width: 180px; height: 31px;">
+   <div style="font-size: 5pt;">
+    <p>Vorsitzender des Aufsichtsrats</p>
+    <p>{seller_employee}</p>
+    <p>Amtsgericht Ulm HRB Nr. 4134</p>
+    <p>Ust.-ID-Nr. {seller_taxidentifier}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 376px; bottom: 37px; width: 129px; height: 24px;">
+   <div style="font-size: 5pt;">
+    <p>Sparkasse Ulm</p>
+    <p>BIC {seller_bic}</p>
+    <p>{seller_iban}</p>
+   </div>
+  </div>
+   <!--<img style=" left: 351px; bottom: 732px; width: 236px; height: 61px;"/>  -->
+  <hr style=" position: absolute; left: 57px; bottom: 436px; width: 475px; height: 0px;"/> <!--Unter Pos- Artikelbezeichnung  -->
+  <hr style=" position: absolute; left: 57px; bottom: 281px; width: 475px; height: 0px;"/> <!-- Über Summe -->
+  <hr style=" position: absolute; left: 57px; bottom: 228px; width: 475px; height: 0px;"/> <!--Über Rechnungsbetrag(Brutto)  -->
+  <hr style=" position: absolute; left: 57px; bottom: 203px; width: 475px; height: 0px;"/> <!--Obere der beiden unteren  -->
+  <hr style=" position: absolute; left: 57px; bottom: 201px; width: 475px; height: 0px;"/> <!-- Unere der beiden unteren -->
+ </body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Rechnung {invoicenumber}
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <style>
+     @page {
+                size: 6.2in 8.77in ;
+                margin: 0;
+                padding: 0;
+         }
+     body {
+        height: 842px !important;
+        width: 595px !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        background: white !important;
+        overflow: hidden !important;
+        font-family: Arial, sans-serif;
+    }
+    .textbox {
+            position: absolute;
+            background-color: transparent;
+            z-index: 1;
+            padding: 0px;
+            margin: 0px;
+     }
+
+   </style>
+ </head>
+ <body>
+   <div class="textbox" style=" left: 340px; bottom: 800px; width: 200px; height: 14px;">
+   <div style="font-size: 10pt;">
+    Rechnung: {invoicenumber}
+   </div>
+  </div>
+  <div class="textbox" style=" left: 63px; bottom: 682px; width: 180px; height: 9px;">
+   <div style="font-size: 6pt;">
+    <p style="margin-bottom: 5px;">{buyer_name}</p>
+    <p style="margin-bottom: 5px;">{buyer_street}</p>
+    <p style="margin-bottom: 5px;">{buyer_citywplc}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 34px; bottom: 604px; width: 273px; height: 8px;">
+   <div style="font-size: 5pt;">
+    Um unseren Kundenservice zu kontaktieren, besuche {seller_website}
+   </div>
+  </div>
+  <div class="textbox" style=" left: 35px; bottom: 571px; width: 87px; height: 9px;">
+   <div style="font-size: 7pt;">
+    <p style="margin-bottom: 5px;">Rechnungsadresse</p>
+    </div>
+    <div style="font-size: 5pt;">
+    <p style="margin-bottom: 5px;">{buyer_name}</p>
+    <p style="margin-bottom: 5px;">{buyer_street}</p>
+    <p style="margin-bottom: 5px;">{buyer_citywplc}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 211px; bottom: 571px; width: 61px; height: 9px;">
+   <div style="font-size: 7pt;">
+       <div style="font-size: 7pt;">
+    <p style="margin-bottom: 5px;">Lieferadresse</p>
+    </div>
+    <div style="font-size: 5pt;">
+    <p style="margin-bottom: 5px;">{buyer_name}</p>
+    <p style="margin-bottom: 5px;">{buyer_street}</p>
+    <p style="margin-bottom: 5px;">{buyer_citywplc}</p>
+   </div>
+   </div>
+  </div>
+   <div class="textbox" style=" left: 386px; bottom: 571px; width: 58px; height: 9px;">
+   <div style="font-size: 7pt;">
+    <p style="margin-bottom: 5px;">Verkauft von</p>
+   </div>
+    <div style="font-size: 5pt;">
+    <p style="margin-bottom: 5px;">{seller_name}</p>
+    <p style="margin-bottom: 5px;">{seller_street}</p>
+    <p style="margin-bottom: 5px;">{seller_citywplc}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 342px; bottom: 758px; width: 167px; height: 8px;">
+   <div style="font-size: 5pt;">
+     <p style="margin-bottom: 5px;">Zahlungsreferenznummer 3O5V6YO0D6KAGEPU</p>
+     <p style="margin-bottom: 5px;">Verkauft von {seller_name}</p>
+     <p style="margin-bottom: 5px;">USt-IDNr. {seller_taxidentifier}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 344px; bottom: 693px; width: 59px; height: 18px;">
+   <div style="font-size: 5pt;">
+    <p>Rechnungsdatum</p>
+    <p style="margin-bottom: 5px;">/Lieferdatum</p>
+    <p style="margin-bottom: 5px;">Rechnungsnummer</p>
+    <p style="margin-bottom: 5px;">Zahlbetrag</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 428px; bottom: 693px; width: 99px; height: 18px;">
+   <div style="font-size: 5pt;">
+    <p style="margin-bottom: 15px;">{dateofdeliveryorservice}</p>
+    <p style="margin-bottom: 5px;">{invoicenumber}</p>
+    <p style="margin-bottom: 5px;">{total} €</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 386px; bottom:500px; width: 180px; height: 8px;">
+   <div style="font-size: 5pt;">
+    USt-IDNr. {seller_taxidentifier}
+   </div>
+  </div>
+  <div class="textbox" style=" left: 34px; bottom: 453px; width: 89px; height: 10px;">
+   <div style="font-size: 7pt;">
+      <p style="margin-bottom: 5px;">Bestellinformationen</p></div>
+    <div style="font-size: 5pt;">
+    <p style="margin-bottom: 5px;">Bestelldatum</p>
+    <p style="margin-bottom: 5px;">Bestellnummer</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 154px; bottom: 437px; width: 55px; height: 8px;">
+   <div style="font-size: 5pt;">
+    <p style="margin-bottom: 5px;">{dateofdeliveryorservice}</p>
+    <p style="margin-bottom: 5px;">42</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 38px; bottom: 393px; width: 90px; height: 12px;">
+   <div style="font-size: 8pt;">
+    Rechnungsdetails
+   </div>
+  </div>
+  <div class="textbox" style=" left: 38px; bottom: 373px; width: 46px; height: 8px;">
+   <div style="font-size: 5pt;">
+    Beschreibung
+   </div>
+  </div>
+  <div class="textbox" style=" left: 301px; bottom: 373px; width: 23px; height: 8px;">
+   <div style="font-size: 5pt;">
+    Menge
+   </div>
+  </div>
+  <div class="textbox" style=" left: 354px; bottom: 373px; width: 35px; height: 8px;">
+   <div style="font-size: 5pt;">
+    <p>Stückpreis</p>
+    <p>(ohne USt.)</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 397px; bottom: 373px; width: 23px; height: 8px;">
+   <div style="font-size: 5pt;">
+    USt. %
+   </div>
+  </div>
+  <div class="textbox" style=" left: 445px; bottom: 373px; width: 35px; height: 8px;">
+   <div style="font-size: 5pt;">
+    <p>Stückpreis</p>
+    <p>(inkl. USt.)</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 501px; bottom: 373px; width: 56px; height: 8px;">
+   <div style="font-size: 5pt;">
+    <p>Zwischensumme</p>
+    <p>(inkl. USt.)</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 38px; bottom: 331px; width: 238px; height: 16px;">
+   <div style="font-size: 5pt;">
+    <p style="margin-bottom: 5px;">{product_name_1}</p>
+    <p style="margin-bottom: 5px;">{product_name_2}</p>
+    <p style="margin-bottom: 5px;">{product_name_3}</p>
+    <p style="margin-bottom: 5px;">{product_name_4}</p>
+    <p style="margin-bottom: 5px;">{product_name_5}</p>
+    <p style="margin-bottom: 5px;">{product_name_6}</p>
+    <p style="margin-bottom: 5px;">{product_name_7}</p>
+    <p style="margin-bottom: 5px;">{product_name_8}</p>
+    <p style="margin-bottom: 5px;">{product_name_9}</p>
+    <p style="margin-bottom: 5px;">{product_name_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 306px; bottom: 342px; width: 4px; height: 7px;">
+   <div style="font-size: 5pt;">
+    <p style="margin-bottom: 5px;">{product_quantity_1}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_2}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_3}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_4}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_5}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_6}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_7}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_8}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_9}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 350px; bottom: 342px; width: 65px; height: 7px;">
+   <div style="font-size: 5pt;">
+    <p style="margin-bottom: 5px;">{product_price_1} €</p>
+    <p style="margin-bottom: 5px;">{product_price_2} €</p>
+    <p style="margin-bottom: 5px;">{product_price_3} €</p>
+    <p style="margin-bottom: 5px;">{product_price_4} €</p>
+    <p style="margin-bottom: 5px;">{product_price_5} €</p>
+    <p style="margin-bottom: 5px;">{product_price_6} €</p>
+    <p style="margin-bottom: 5px;">{product_price_7} €</p>
+    <p style="margin-bottom: 5px;">{product_price_8} €</p>
+    <p style="margin-bottom: 5px;">{product_price_9} €</p>
+    <p style="margin-bottom: 5px;">{product_price_10} €</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 403px; bottom: 341px; width: 17px; height: 8px;">
+   <div style="font-size: 5pt;">
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_1}</p>
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_2}</p>
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_3}</p>
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_4}</p>
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_5}</p>
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_6}</p>
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_7}</p>
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_8}</p>
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_9}</p>
+    <p style="margin-bottom: 5px;">{product_sales_tax_percent_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 445px; bottom: 342px; width: 60px; height: 7px;">
+   <div style="font-size: 5pt;">
+    {subtotal}€
+   </div>
+  </div>
+  <div class="textbox" style=" left: 501px; bottom: 342px; width: 60px; height: 7px;">
+   <div style="font-size: 5pt;">
+    {subtotal} €
+   </div>
+  </div>
+  <div class="textbox" style=" left: 298px; bottom: 175px; width: 64px; height: 11px;">
+   <div style="font-size: 8pt;">
+    Gesamtpreis
+   </div>
+  </div>
+  <div class="textbox" style=" left: 490px; bottom: 175px; width: 80px; height: 11px;">
+   <div style="font-size: 8pt;">
+    {total}€
+   </div>
+  </div>
+  <div class="textbox" style=" left: 364px; bottom: 149px; width: 23px; height: 8px;">
+   <div style="font-size: 5pt;">
+    USt. %
+   </div>
+  </div>
+  <div class="textbox" style=" left: 446px; bottom: 149px; width: 57px; height: 8px;">
+   <div style="font-size: 5pt;">
+     <p>Zwischensumme</p>
+     <p>(ohne USt.)</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 535px; bottom: 149px; width: 14px; height: 8px;">
+   <div style="font-size: 5pt;">
+    USt.
+   </div>
+  </div>
+  <div class="textbox" style=" left: 364px; bottom: 115px; width: 15px; height: 7px;">
+   <div style="font-size: 5pt;">
+   {product_sales_tax_percent_1}
+   </div>
+  </div>
+  <div class="textbox" style=" left: 446px; bottom: 115px; width: 25px; height: 7px;">
+   <div style="font-size: 5pt;">
+    {subtotal} €
+   </div>
+  </div>
+  <div class="textbox" style=" left: 522px; bottom: 115px; width: 21px; height: 7px;">
+   <div style="font-size: 5pt;">
+    {taxes}€
+   </div>
+  </div>
+  <div class="textbox" style=" left: 301px; bottom: 93px; width: 43px; height: 8px;">
+   <div style="font-size: 5pt;">
+    USt. Gesamt
+   </div>
+  </div>
+  <div class="textbox" style=" left: 464px; bottom: 93px; width: 50px; height: 8px;">
+   <div style="font-size: 5pt;">
+   {product_price_1}€
+   </div>
+  </div>
+  <div class="textbox" style=" left: 522px; bottom: 93px; width: 50px; height: 8px;">
+   <div style="font-size: 5pt;">
+    {product_sales_tax_cost_1}€
+   </div>
+  </div>
+  <div class="textbox" style=" left: 514px; bottom: 56px; width: 53px; height: 9px;">
+   <div style="font-size: 6pt;">
+    Seite 1 von 1
+   </div>
+  </div>
+   <!--  <div class="rectangle" style="position: absolute; left: 28px; bottom: 73px; width: 539px; height: 1px; background-color: rgb(193,193, 193);">-->
+<!--  </div>-->
+  <div class="rectangle" style="position: absolute; left: 34px; bottom: 590px; width: 527px; height: 1px; background-color: rgb(193,193, 193);"> <!--Unter Um unsere Kunden ...-->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 34px; bottom: 475px; width: 527px; height: 1px; background-color: rgb(193,193, 193);"> <!--Über Bestellinformationen  -->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 34px; bottom: 389px; width: 527px; height: 1px; background-color: rgb(233,233, 233);"> <!--Unter Rechnungsdetails  -->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 34px; bottom: 195px; width: 527px; height: 162px; background-color: rgb(248,248, 248);"> <!--Produkt Box  -->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 34px; bottom: 185px; width: 527px; height: 1px; background-color: rgb(233,233, 233);"> <!--Strich unter letztem Produkt-->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 298px; bottom: 164px; width: 263px; height: 1px; background-color: rgb(233,233, 233);"> <!--Strich unter Gesamtpreis  -->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 334px; bottom: 655px; width: 227px; height: 124px; background-color: rgb(235,248, 249);"> <!--Obere blaue Box blaue Box  -->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 334px; bottom: 655px; width: 1px; height: 124px; background-color: rgb(186,210, 222);"> <!--Obere blaue Box linker Strich  -->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 334px; bottom: 655px; width: 227px; height: 1px; background-color: rgb(186,210, 222);">  <!--Obere unterer Box rechter Strich  -->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 560px; bottom: 655px; width: 1px; height: 124px; background-color: rgb(186,210, 222);">  <!--Obere blaue Box rechter Strich  -->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 334px; bottom: 778px; width: 227px; height: 1px; background-color: rgb(186,210, 222);"> <!--Obere blaue Box oberer Stich -->
+  </div>
+  <div class="rectangle" style="position: absolute; left: 342px; bottom: 721px; width: 211px; height: 1px; background-color: rgb(193,193, 193);"> <!--Obere blaue Box strich in der Box -->
+  </div>
+   <div class="rectangle" style="position: absolute; left: 298px; bottom: 108px; width: 263px; height: 1px; background-color: rgb(233,233, 233);"> <!--Schwarzer Streifen über untersten USt.Gesamt -->
+  </div>
+   <div class="rectangle" style="position: absolute; left: 298px; bottom: 108px; width: 263px; height: 22px; background-color: rgb(248,248, 248);"> <!--Farbliche Boxbottom: über untersten USt.Gesamt -->
+  </div>
+ </body>
+</html>

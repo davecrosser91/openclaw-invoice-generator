@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content=" initial-scale=1.0" name="viewport"/>
+  <meta content="Finanzamt" name="author"/>
+  <meta content="Testbeschreibung" name="description"/>
+  <meta content="2024-04-17T16:20:02.136401" name="date"/>
+  <title>
+   {invoicenumber}
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+      <style>
+          @page {
+                size: 6.2in 8.77in;
+                margin: 0;
+                padding: 0;
+         }
+    body {
+        height: 842px;
+        width: 595px;
+        margin-left: auto;
+        margin-right: auto;
+        background: white;
+        overflow: hidden;
+        font-family:Arial, sans-serif
+    }
+   .textbox {
+            position: absolute;
+            background-color: transparent;
+            z-index: 1;
+            padding: 0px;
+            margin: 0px;
+     }
+    </style>
+ </head>
+ <body>
+  <div class="textbox" style="left: 21px; bottom: 726px; width: 300px; height: 7px; ">
+   <div style="font-size: 5pt;">
+    {seller_name}  *  {seller_street}  *  {seller_citywplc}
+   </div>
+  </div>
+  <div class="textbox" style=" left: 33px; bottom: 651px; width: 162px; height: 55px; ">
+   <div style="font-size: 6pt;">
+    <p>{buyer_name}</p>
+    <p>{buyer_employee}</p>
+    <p>{buyer_street}</p>
+    <p>{buyer_citywplc}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 33px; bottom: 578px; width: 150px; height: 11px; ">
+   <div style="font-size: 7pt;">
+    <b>Rechnung Nr. {invoicenumber}</b>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 33px; bottom: 558px; width: 66px; height: 9px; ">
+   <div style="font-size: 7pt;">
+    Leistungsdatum:
+   </div>
+  </div>
+  <div class="textbox" style=" left: 118px; bottom: 558px; width: 47px; height: 9px; ">
+   <div style="font-size: 7pt;">
+    {dateofdeliveryorservice}
+   </div>
+  </div>
+  <div class="textbox" style=" left: 443px; bottom: 573px; width: 44px; height: 40px; ">
+   <div style="font-size: 4pt;">
+    <p>Seite:</p>
+    <p>Kunden Nr.:</p>
+    <p> Bearbeiter:</p>
+    <p>Lieferdatum:</p>
+    <p>Leistungsdatum:</p>
+    <p>Datum:</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 506px; bottom: 573px; width: 38px; height: 40px; ">
+   <div style="font-size: 4pt;">
+    <p>1</p>
+    <p>{buyer_customerid}</p>
+    <p>{seller_employee}</p>
+    <p>{dateofdeliveryorservice}</p>
+    <p>{dateofdeliveryorservice}</p>
+    <p>{dateofinvoice}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 35px; bottom: 526px; width: 25px; height: 8px; ">
+   <div style="font-size: 7pt;">
+    Art.
+   </div>
+  </div>
+  <div class="textbox" style=" left: 87px; bottom: 526px; width: 25px; height: 8px; ">
+   <div style="font-size: 7pt;">
+    Menge
+   </div>
+  </div>
+  <div class="textbox" style=" left: 170px; bottom: 526px; width: 16px; height: 8px; ">
+   <div style="font-size: 7pt;">
+    Produkt
+   </div>
+  </div>
+  <div class="textbox" style=" left: 365px; bottom: 516px; width: 24px; height: 17px; ">
+   <div style="font-size: 7pt;">
+    <p>Einzel</p>
+    <p>EUR</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 460px; bottom: 516px; width: 28px; height: 17px; ">
+   <div style="font-size: 7pt;">
+    <p>Gesamt</p>
+    <p>EUR</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 39px; bottom: 485px; width: 18px; height: 9px; ">
+   <div style="font-size: 6pt;">
+    <p style="margin-bottom: 12px;">{product_pos_1}</p>
+    <p style="margin-bottom: 12px;">{product_pos_2}</p>
+    <p style="margin-bottom: 12px;">{product_pos_3}</p>
+    <p style="margin-bottom: 12px;">{product_pos_4}</p>
+    <p style="margin-bottom: 12px;">{product_pos_5}</p>
+    <p style="margin-bottom: 12px;">{product_pos_6}</p>
+    <p style="margin-bottom: 12px;">{product_pos_7}</p>
+    <p style="margin-bottom: 12px;">{product_pos_8}</p>
+    <p style="margin-bottom: 12px;">{product_pos_9}</p>
+    <p style="margin-bottom: 12px;">{product_pos_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 62px; bottom: 485px; width: 18px; height: 9px; ">
+   <div style="font-size: 6pt;">
+    <p style="margin-bottom: 12px;">{product_quantity_1}</p>
+    <p style="margin-bottom: 12px;">{product_quantity_2}</p>
+    <p style="margin-bottom: 12px;">{product_quantity_3}</p>
+    <p style="margin-bottom: 12px;">{product_quantity_4}</p>
+    <p style="margin-bottom: 12px;">{product_quantity_5}</p>
+    <p style="margin-bottom: 12px;">{product_quantity_6}</p>
+    <p style="margin-bottom: 12px;">{product_quantity_7}</p>
+    <p style="margin-bottom: 12px;">{product_quantity_8}</p>
+    <p style="margin-bottom: 12px;">{product_quantity_9}</p>
+    <p style="margin-bottom: 12px;">{product_quantity_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 95px; bottom: 485px; width: 80px; height: 9px; ">
+   <div style="font-size: 6pt;">
+    <p style="margin-bottom: 12px;">{product_unity_1}</p>
+    <p style="margin-bottom: 12px;">{product_unity_2}</p>
+    <p style="margin-bottom: 12px;">{product_unity_3}</p>
+    <p style="margin-bottom: 12px;">{product_unity_4}</p>
+    <p style="margin-bottom: 12px;">{product_unity_5}</p>
+    <p style="margin-bottom: 12px;">{product_unity_6}</p>
+    <p style="margin-bottom: 12px;">{product_unity_7}</p>
+    <p style="margin-bottom: 12px;">{product_unity_8}</p>
+    <p style="margin-bottom: 12px;">{product_unity_9}</p>
+    <p style="margin-bottom: 12px;">{product_unity_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 170px; bottom: 464px; width: 204px; height: 30px; ">
+   <div style="font-size: 6pt;">
+    <p style="margin-bottom: 12px;">{product_name_1}</p>
+    <p style="margin-bottom: 12px;">{product_name_2}</p>
+    <p style="margin-bottom: 12px;">{product_name_3}</p>
+    <p style="margin-bottom: 12px;">{product_name_4}</p>
+    <p style="margin-bottom: 12px;">{product_name_5}</p>
+    <p style="margin-bottom: 12px;">{product_name_6}</p>
+    <p style="margin-bottom: 12px;">{product_name_7}</p>
+    <p style="margin-bottom: 12px;">{product_name_8}</p>
+    <p style="margin-bottom: 12px;">{product_name_9}</p>
+    <p style="margin-bottom: 12px;">{product_name_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 365px; bottom: 485px; width: 200px; height: 9px; ">
+   <div style="font-size: 6pt;">
+    <p style="margin-bottom: 12px;">{product_price_1} €</p>
+    <p style="margin-bottom: 12px;">{product_price_2} €</p>
+    <p style="margin-bottom: 12px;">{product_price_3} €</p>
+    <p style="margin-bottom: 12px;">{product_price_4} €</p>
+    <p style="margin-bottom: 12px;">{product_price_5} €</p>
+    <p style="margin-bottom: 12px;">{product_price_6} €</p>
+    <p style="margin-bottom: 12px;">{product_price_7} €</p>
+    <p style="margin-bottom: 12px;">{product_price_8} €</p>
+    <p style="margin-bottom: 12px;">{product_price_9} €</p>
+    <p style="margin-bottom: 12px;">{product_price_10} €</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 460px; bottom: 485px; width: 200px; height: 9px; ">
+   <div style="font-size: 6pt;">
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_1} €</p>
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_2} €</p>
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_3} €</p>
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_4} €</p>
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_5} €</p>
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_6} €</p>
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_7} €</p>
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_8} €</p>
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_9} €</p>
+    <p style="margin-bottom: 12px;">{product_cost_wo_tax_10} €</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 39px; bottom: 215px; width: 60px; height: 9px; ">
+   <div style="font-size: 7pt;">
+    <b>
+     Gesamtbetrag
+    </b>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 485px; bottom: 215px; width: 200px; height: 9px; ">
+   <div style="font-size: 7pt;">
+    <b>
+     {total} €
+    </b>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 39px; bottom: 185px; width: 500px; height: 9px; ">
+   <div style="font-size: 6pt;">
+    Der Gesamtbetrag setzt sich aus Netto {subtotal} € zuzüglich {product_sales_tax_percent_1} € % USt. = {taxes} € zusammen.
+   </div>
+  </div>
+  <div class="textbox" style=" left: 33px; bottom: 160px; width: 177px; height: 9px; ">
+   <div style="font-size: 6pt;">
+    Zahlbar nach Rechnungserhalt ohne Abzug
+   </div>
+  </div>
+  <div class="textbox" style=" left: 33px; bottom: 140px; width: 39px; height: 9px; ">
+   <div style="font-size: 6pt;">
+    Abholung
+   </div>
+  </div>
+  <div class="textbox" style=" left: 130px; bottom: 100px; width: 340px; height: 16px; ">
+   <div style="font-size: 5pt;">
+    Es gelten die AGB der {seller_name}, die Sie unter {seller_website}/agb einsehen können.
+    Für alle verkauften Artikel gelten im Garantie-/Gewährleistungsfall die Garantiebedingungen des Herstellers.
+   </div>
+  </div>
+  <div class="textbox" style=" left: 130px; bottom: 30px; width: 300px; height: 57px; ">
+   <div style="font-size: 6pt;">
+    <p>{seller_name}</p>
+    <p>{seller_employee}</p>
+    <p>{seller_address}</p>
+    <p>{seller_email}     {seller_website}</p>
+    <p>{seller_phone}, Fax: {seller_fax}</p>
+   </div>
+   <div style="font-size: 5pt;">
+    Montag-Freitag 9-19 Uhr Samstag 9-14 Uhr
+   </div>
+  </div>
+  <div class="textbox" style=" left: 340px; bottom: 30px; width: 45px; height: 57px; ">
+   <div style="font-size: 6pt;">
+    <p>USt.-Ident.</p>
+    <p>BIC</p>
+    <p>IBAN</p>
+   </div>
+  </div>
+  <div class="textbox" style=" left: 385px; bottom: 30px; width: 111px; height: 57px; ">
+   <div style="font-size: 6pt;">
+    <p>{seller_taxidentifier}</p>
+    <p>{seller_bic}</p>
+    <p>{seller_iban}</p>
+   </div>
+  </div>
+  <img alt="No Pic f" src="src/tests/ai_2.jpg" style="position: absolute; left: 494px; bottom: 750px; width: 64px; height: 64px;"/>
+  <div class="rectangle" style="position: absolute; left: 30px; bottom: 175px; width: 525px; height: 360px; background-color: rgba(0,0,0,0.0); border: 1px solid black;">
+  </div>
+  <hr style="position: absolute; left: 55px; bottom: 225px; width: 1px; height: 309px; writing-mode: vertical-rl; border: none; background-color: black;"/> <!-- Zwischen Pos. und Menge -->
+  <hr style="position: absolute; left: 165px; bottom: 225px; width: 1px; height: 309px; writing-mode: vertical-rl; border: none; background-color: black;"/> <!-- Zwischen Menge. und Produkt -->
+  <hr style="position: absolute; left: 90px; bottom: 225px; width: 1px; height: 281px; writing-mode: vertical-rl; border: none; background-color: black;"/> <!-- Unter Menge (vertikal) ... {total} -->
+  <hr style="position: absolute; left: 30px; bottom: 225px; width: 525px; height: 0px;"/> <!-- Über Gesamtbetrag ... {total} -->
+  <hr style="position: absolute; left: 30px; bottom: 506px; width: 525px; height: 0px;"/> <!-- Unter Pos., Menge, Text ... (horizontal -->
+  <hr style="position: absolute; left: 455px; bottom: 225px; width: 1px; height: 309px; writing-mode: vertical-rl; border: none; background-color: black;"/> <!-- Zwischen Einzel /t EUR und Gesamt /t EUR -->
+  <hr style="position: absolute; left: 355px; bottom: 225px; width: 1px; height: 309px; writing-mode: vertical-rl; border: none; background-color: black;"/> <!-- Zwischen Text und Einzel /t EUR -->
+ </body>
+</html>

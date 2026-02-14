@@ -1,0 +1,20 @@
+# Endpunkte für Strapi
+STRAPI_INVOICE_ENDP = "/api/invoices"  # WICHTIG KANN NOCH DIE ID DAHINTER bsp:  /api/invoices/1.
+STRAPI_PRODUCT_ENDP = "/api/products"  # WICHTIG KANN NOCH DIE ID DAHINTER bsp:  /api/products/1.
+STRAPI_SURNAME_ENDP = "/api/surnames"
+STRAPI_M_FIRSTNAME_ENDP = "/api/malefirstnames"
+STRAPI_W_FIRSTNAME_ENDP = "/api/femalefirstnames"
+STRAPI_CITY_ENDP = "/api/cities"
+STRAPI_STREET_ENDP = "/api/streets"
+STRAPI_COMPANY_ENDP = "/api/companies"
+STRAPI_TEMPLATE_ENDP = "/api/templates"
+STRAPI_BUYERS_ENDP = "/api/buyers"
+STRAPI_SELLER_ENDP = "/api/sellers"
+STRAPI_STORY_ENDP = "/api/stories"
+STRAPI_ENTITY_ENDP = "/api/entities"
+STRAPI_PDFINVOICE_ENDP = "/api/pdf-invoices"
+STRAPI_MEDIA_LIBRARY_ENDP = "/api/upload"
+STRAPI_MEDIA_LIBRARY_GET_PDF_ENDP = "/api/upload/files"
+STRAPI_COUNT_ENDP = "/count/view"
+STRAPI_IMAGE_PAIR_ENDP = "/api/image-pairs"
+STRAPI_CHAIN_PRESET_ENDP = "/api/chain-presets"

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Rechnung</title>
+    <style>
+        @media print {
+            @page {
+                margin: 0;
+            }
+
+            body {
+                margin: 1.6cm;
+            }
+        }
+
+        .header-margin {
+            margin-bottom: 1.6rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .border-b {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .pb-4 {
+            padding-bottom: 1rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .mt-8 {
+            margin-top: 2rem;
+        }
+
+        .text-sm {
+            font-size: 0.7rem;
+        }
+
+        .h-8 {
+            height: 2rem;
+        }
+
+        .mt-10 {
+            margin-top: 2.5rem;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .text-lg {
+            font-size: 1rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .m-4 {
+            margin: 1rem;
+        }
+
+        .border-collapse {
+            border-collapse: collapse;
+        }
+
+        .table-auto {
+            width: auto;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .border-b {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .table-auto {
+            width: auto;
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-sm {
+            font-size: 0.7rem;
+        }
+
+        .border-t {
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .pt-8 {
+            padding-top: 2rem;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .text-blue-600 {
+            color: #3182ce;
+        }
+
+        /* Modified Table Font Size */
+        table td, table th {
+            font-size: 0.6rem;
+        }
+
+    </style>
+</head>
+
+<body style="max-width: 575px; height: 740px; font-family: sans-serif;">
+    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; margin-bottom: 1rem;">
+        <p style="font-size: 0.7rem;">{seller_address}</p>
+        <img alt="HETZNER-Logo" style="height: 1.4rem;" src="hetzner-logo.png" />
+    </div>
+    <div style="margin-top: 1.4rem;">
+        <p>{buyer_name}<br />
+            {buyer_address}</p>
+        <p style="font-size: 0.7rem;">Tel: {buyer_phone}<br />
+            Fax: {buyer_fax}<br />
+            Email: {buyer_email}<br />
+            Website: {buyer_website}</p>
+    </div>
+    <div style="border-bottom: 1px solid #e5e7eb; margin-bottom: 1.4rem;"></div>
+    <div style="text-align: center; margin-bottom: 1.4rem; margin-bottom: 1.6rem;">
+        <h1 style="font-weight: 700; font-size: 0.875rem; margin: 1rem; margin-top: 2.5rem;">RECHNUNG {invoicenumber}</h1>
+        <p style="font-size: 0.7rem;">Rechnungsdatum: {dateofinvoice}</p>
+    </div>
+    <table style="border-collapse: collapse; width: 100%; margin-top: 1rem; margin-bottom: 1rem; border-bottom: 1px solid #e5e7eb;">
+        <thead>
+            <tr>
+                <th style="text-align: left; border-bottom: 1px solid #e5e7eb; font-size: 0.7rem;">Pos.</th>
+                <th style="text-align: left; border-bottom: 1px solid #e5e7eb; font-size: 0.7rem;">Produktbeschreibung</th>
+                <th style="text-align: left; border-bottom: 1px solid #e5e7eb; font-size: 0.7rem;">Menge</th>
+                <th style="text-align: right; border-bottom: 1px solid #e5e7eb; font-size: 0.7rem;">Einzelpreis</th>
+                <th style="text-align: right; border-bottom: 1px solid #e5e7eb; font-size: 0.7rem;">Preis (exkl. MwSt)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td style="font-weight: 700; font-size: 0.7rem;">{product_name_1}</td>
+                <td style="text-align: right; font-size: 0.7rem;"> {product_quantity_1}</td>
+                <td style="text-align: right; font-size: 0.7rem;">{product_price_1} €</td>
+                <td style="text-align: right; font-size: 0.7rem;">{product_cost_wo_tax_1} €</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td style="font-weight: 700; font-size: 0.7rem;">{product_name_2}</td>
+                <td style="text-align: right; font-size: 0.7rem;">{product_quantity_2}</td>
+                <td style="text-align: right; font-size: 0.7rem;">{product_price_2} €</td>
+                <td style="text-align: right; font-size: 0.7rem;">{product_cost_wo_tax_2} €</td>
+            </tr>
+            <!-- Weitere Zeilen analog -->
+        </tbody>
+    </table>
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 1.4rem;">
+        <tbody>
+            <tr>
+                <th style="text-align: right; font-size: 0.7rem;">Steuersatz</th>
+                <th style="text-align: right; font-size: 0.7rem;">Gesamt (exkl. MwSt)</th>
+                <th style="text-align: right; font-size: 0.7rem;">MwSt</th>
+                <th style="text-align: right;">Gesamt</th>
+            </tr>
+            <tr>
+                <td style="text-align: right; font-size: 0.7rem;">{product_sales_tax_percent_1}</td>
+                <td style="text-align: right; font-size: 0.7rem;">{subtotal} €</td>
+                <td style="text-align: right; font-size: 0.7rem;">{taxes} €</td>
+                <td style="text-align: right; font-size: 0.7rem;">{total} €</td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="border-top: 1px solid #e5e7eb; padding-top: 1.4rem;">
+        <p style="font-weight: 700; margin-top: 0.7rem;">Zahlbetrag: {total} €</p>
+        <p>Zahlungsmethode: PayPal</p>
+        <p style="font-size: 0.7rem;">Bitte überweisen Sie den Betrag nun via PayPal.<br />
+            Benutzen Sie bitte folgend <a style="color: #3182ce;" href="#">Link</a> um zu bezahlen.</p>
+    </div>
+    <div style="font-size: 0.7rem; margin-top: 1.4rem;">
+        <p>{Rechtliche Informationen}<br />
+            Bankverbindung: {seller_bankdetails}</p>
+    </div>
+</body>
+
+</html>

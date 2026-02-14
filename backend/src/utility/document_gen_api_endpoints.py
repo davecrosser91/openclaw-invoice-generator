@@ -1,0 +1,12 @@
+# Endpunkte für DocumentGenAPI (Kombi aus allen Anderen)
+DOCUMENT_GEN_RETRIVE_HTML_PLACEHOLDERS = "/retrieve_html_placeholders"
+DOCUMENT_GEN_CREATE_TEMPLATE = "/create_template_from_rawHTML_and_entities"
+DOCUMENT_CREATE_INVOICE = "/create_invoice"
+DOCUMENT_CREATE_PDF_INVOICE_ENTRY = "/create_pdf_invoice_entry"
+DOCUMENT_CREATE_PDF_FOR_PDF_INVOICE_ENTRY = "/create_pdf_for_pdf_invoice_entry"
+DOCUMENT_POST_TO_STRAPI = "/post_invoice_data_to_strapi"
+DOCUMENT_CREATE_PDF_FROM_INVOICE = "/create_pdf_from_invoice"
+DOCUMENT_GET_PDF = "/get_pdf_from_strapi"
+DOCUMENT_CREATE_RAW_HTML = "/create_rawHTML"
+DOCUMENT_CREATE_ENTITY_JSON = "/create_entity_json_from_rawHTML"
+DOCUMENT_MODIFY_TEMPLATE = "/modify_template_product_count"

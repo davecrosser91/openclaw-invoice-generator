@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content=" initial-scale=1.0" name="viewport"/>
+  <meta content="Regrapes" name="author"/>
+  <meta content="Testbeschreibung" name="description"/>
+  <meta content="2024-04-30T16:45:06.421116" name="date"/>
+  <title>
+   {invoicenumber}
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <style>
+   @page {                
+                size: 6.2in 8.77in;
+                margin: 0;
+                padding: 0;
+         }
+  body {
+                height: 842px;
+                width: 595px;
+                margin-left: 0;
+                margin-right: 0;
+                background: white;
+                font-family:Arial, sans-serif;
+                overflow: hidden;
+                padding: 0px;
+        }
+  .textbox {
+            position: absolute;
+            background-color: transparent;
+            z-index: 1;
+            padding: 0px;
+            margin: 0px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="textbox" style="left: 450px; bottom: 790px; width: 60px; height: 12px;">
+   <div style="font-size: 12px;">
+    Firmenlogo
+   </div>
+  </div>
+  <div class="textbox" style="left: 80px; bottom: 706px; width: 238px; height: 28px;">
+   <div style="font-size: 13px;">
+     <p style="margin-bottom: 5px;">{seller_name}</p>
+   </div>
+   <div style="font-size: 9px;">
+      <p style="margin-bottom: 5px;">{seller_address}</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 349px; bottom: 705px; width: 166px; height: 34px;">
+   <div style="font-size: 9px;">
+    <p>Telefon: {seller_phone}</p>
+    <p>Fax: {seller_fax}</p>
+    <p>E-Mail: {seller_email}</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 80px; bottom: 610px; width: 265px; height: 59px;">
+   <div style="font-size: 10px;">
+     <p style="margin-bottom: 5px;">{buyer_name}</p>
+   </div>
+   <div style="font-size: 9px;">
+    <p>{buyer_address}</p>
+    <p>Kunden-ID: {buyer_customerid}</p>
+    <p>Rechnungsnummer: {invoicenumber}</p>
+    <p>Rechnungsdatum: {dateofinvoice}</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 200px; bottom: 540px; width: 227px; height: 14px;">
+   <div style="font-size: 12px;">
+    Rechnung {invoicenumber}
+   </div>
+  </div>
+  <div class="textbox" style="left: 87px; bottom: 522px; width: 113px; height: 9px;">
+   <div style="font-size: 9px;">
+    <p style="margin-bottom: 5px;">Art.</p>
+    <p style="margin-bottom: 5px;">{product_pos_1}</p>
+    <p style="margin-bottom: 5px;">{product_pos_2}</p>
+    <p style="margin-bottom: 5px;">{product_pos_3}</p>
+    <p style="margin-bottom: 5px;">{product_pos_4}</p>
+    <p style="margin-bottom: 5px;">{product_pos_5}</p>
+    <p style="margin-bottom: 5px;">{product_pos_6}</p>
+    <p style="margin-bottom: 5px;">{product_pos_7}</p>
+    <p style="margin-bottom: 5px;">{product_pos_8}</p>
+    <p style="margin-bottom: 5px;">{product_pos_9}</p>
+    <p style="margin-bottom: 5px;">{product_pos_10}</p>
+   </div>
+  </div>
+    <div class="textbox" style="left: 115px; bottom: 522px; height: 9px;">
+   <div style="font-size: 9px;">
+     <p style="margin-bottom: 5px;">Produktbeschreibung</p>
+    <p style="margin-bottom: 5px;">{product_name_1}</p>
+    <p style="margin-bottom: 5px;">{product_name_2}</p>
+    <p style="margin-bottom: 5px;">{product_name_3}</p>
+    <p style="margin-bottom: 5px;">{product_name_4}</p>
+    <p style="margin-bottom: 5px;">{product_name_5}</p>
+    <p style="margin-bottom: 5px;">{product_name_6}</p>
+    <p style="margin-bottom: 5px;">{product_name_7}</p>
+    <p style="margin-bottom: 5px;">{product_name_8}</p>
+    <p style="margin-bottom: 5px;">{product_name_9}</p>
+    <p style="margin-bottom: 5px;">{product_name_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 268px; bottom: 522px; width: 28px; height: 9px;">
+   <div style="font-size: 9px;">
+    <p style="margin-bottom: 5px;">Menge</p>
+    <p style="margin-bottom: 5px;">{product_quantity_1}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_2}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_3}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_4}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_5}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_6}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_7}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_8}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_9}</p>
+    <p style="margin-bottom: 5px;">{product_quantity_10}</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 316px; bottom: 522px; height: 9px;">
+   <div style="font-size: 9px;">
+    <p style="margin-bottom: 5px;">Einzelpreis</p>
+    <p style="margin-bottom: 5px;">{product_price_1} €</p>
+    <p style="margin-bottom: 5px;">{product_price_2} €</p>
+    <p style="margin-bottom: 5px;">{product_price_3} €</p>
+    <p style="margin-bottom: 5px;">{product_price_4} €</p>
+    <p style="margin-bottom: 5px;">{product_price_5} €</p>
+    <p style="margin-bottom: 5px;">{product_price_6} €</p>
+    <p style="margin-bottom: 5px;">{product_price_7} €</p>
+    <p style="margin-bottom: 5px;">{product_price_8} €</p>
+    <p style="margin-bottom: 5px;">{product_price_9} €</p>
+    <p style="margin-bottom: 5px;">{product_price_10} €</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 418px; bottom: 522px; height: 9px;">
+   <div style="font-size: 9px;">
+    <p style="margin-bottom: 5px;">Preis (exkl. MwSt.) </p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_1} €</p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_2} €</p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_3} €</p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_4} €</p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_5} €</p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_6} €</p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_7} €</p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_8} €</p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_9} €</p>
+    <p style="margin-bottom: 5px;">{product_cost_wo_tax_10} €</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 80px; bottom: 305px; width: 300px; height: 9px;">
+   <div style="font-size: 9px;">
+    <p style="margin-bottom: 5px;">Zwischensumme (exkl. MwSt.)</p>
+    <p style="margin-bottom: 15px;">Steuersatz {product_sales_tax_percent_1}</p>
+   </div>
+      <div style="font-size: 10px;">
+    <p style="margin-bottom: 5px;"><b>Gesamt</b></p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 415px; bottom: 305px; width: 200px; height: 10px;">
+   <div style="font-size: 9px;">
+    <p style="margin-bottom: 5px;">{subtotal} €</p>
+    <p style="margin-bottom: 15px;">{taxes} €</p>
+   </div>
+      <div style="font-size: 9px;">
+    <p style="margin-bottom: 5px;">{total} €</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 80px; bottom: 200px; width: 272px; height: 16px;">
+   <div style="font-size: 13px;">
+    <p>Zahlungsbetrag: {total} €</p>
+    <p>Zahlungsmethode: PayPal</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 80px; bottom: 125px; width: 500px; height: 9px;">
+   <div style="font-size: 9px;">
+    <p>Bitte zahlen Sie den fälligen Betrag jetzt per PayPal.</p>
+    <p>Verwenden Sie den folgenden Link [PayPal Zahlungslink]</p>
+   </div>
+  </div>
+  <div class="textbox" style="left: 80px; bottom: 75px; width: 385px; height: 9px;">
+   <div style="font-size: 9px;">
+    <p>{seller_name}</p>
+    <p>{seller_address}</p>
+    <p>Bankverbindung: {seller_iban}</p>
+   </div>
+  </div>
+  <div class="rectangle" style="position: absolute; left: 80px; bottom: 320px; width: 435px; height: 215px; background-color: rgba(0,0,0,0.0); border: 1px solid black;">
+  </div>
+  <hr style="position: absolute; left: 80px; bottom: 515px; width: 435px; height: 0px;"/>
+  <hr style="position: absolute; left: 80px; bottom: 230px; width: 435px; height: 0px;"/>
+ </body>
+</html>
