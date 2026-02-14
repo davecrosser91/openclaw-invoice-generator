@@ -1237,8 +1237,8 @@ The `app/run_services.py` script starts services based on `--scope`:
 ### Production URLs
 
 - Python Backend: `https://py.ascend-prod.regrapes.dev`
-- Strapi CMS: `https://ascend-prod.regrapes.dev`
-- Frontend: `https://app.ascend-prod.regrapes.dev`
+- Strapi CMS: `https://api.ascend-prod.regrapes.dev`
+- Frontend: `https://ascend-prod.regrapes.dev`
 
 ---
 

@@ -12,7 +12,7 @@
       },
       "strapiUrl": {
         "type": "string",
-        "description": "Base URL of the Strapi CMS (e.g., https://ascend-prod.regrapes.dev or http://localhost:1337)"
+        "description": "Base URL of the Strapi CMS (e.g., https://api.ascend-prod.regrapes.dev or http://localhost:1337)"
       },
       "bearerToken": {
         "type": "string",

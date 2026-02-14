@@ -21,7 +21,7 @@ Generate and manage synthetic invoices using the DocumentGenerator API and Strap
 ## Environment
 
 - `DOCGEN_API_URL`: Base URL of the DocumentGenerator API (e.g., `https://py.ascend-prod.regrapes.dev`)
-- `STRAPI_URL`: Base URL of the Strapi CMS (e.g., `https://ascend-prod.regrapes.dev` or `http://localhost:1337`)
+- `STRAPI_URL`: Base URL of the Strapi CMS (e.g., `https://api.ascend-prod.regrapes.dev` or `http://localhost:1337`)
 - `STRAPI_BEARER_TOKEN`: Bearer token for Strapi authentication
 
 ---
