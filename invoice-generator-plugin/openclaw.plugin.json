@@ -1,0 +1,35 @@
+{
+  "id": "invoice-generator",
+  "name": "Invoice Generator",
+  "version": "2.0.0",
+  "description": "Generate and manage synthetic invoices via DocumentGenerator API and Strapi CMS. Full CRUD on all content types, PDF generation with verification, and dataset statistics.",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "apiUrl": {
+        "type": "string",
+        "description": "Base URL of the DocumentGenerator API (e.g., https://py.ascend-prod.regrapes.dev)"
+      },
+      "strapiUrl": {
+        "type": "string",
+        "description": "Base URL of the Strapi CMS (e.g., https://ascend-prod.regrapes.dev or http://localhost:1337)"
+      },
+      "bearerToken": {
+        "type": "string",
+        "description": "Strapi bearer token for authentication"
+      },
+      "maxRetries": {
+        "type": "number",
+        "description": "Maximum retry attempts per invoice generation",
+        "default": 3
+      }
+    },
+    "required": ["apiUrl", "strapiUrl", "bearerToken"]
+  },
+  "uiHints": {
+    "bearerToken": {
+      "label": "Strapi Bearer Token",
+      "sensitive": true
+    }
+  }
+}

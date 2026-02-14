@@ -1,0 +1,9 @@
+{
+  "name": "@docgen/openclaw-invoice-generator",
+  "version": "1.0.0",
+  "description": "OpenClaw plugin for generating synthetic invoices via DocumentGenerator API",
+  "main": "index.ts",
+  "dependencies": {
+    "@sinclair/typebox": "^0.33.0"
+  }
+}
